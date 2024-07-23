@@ -1,5 +1,8 @@
 {
+  "include": ["src"],
+  "exclude": ["src/**/__docs__", "src/**/*.stories.ts", "src/**/*.stories.tsx", "src/**/__test__"],
   "compilerOptions": {
+    "baseUrl":"./",
     "target": "ES5",
     "useDefineForClassFields": true,
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
@@ -19,13 +22,9 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "declaration": true
-  },
-  "include": ["src"],
-  "exclude": [
-    "src/**/__docs__",
-    "src/**/*.stories.ts",
-    "src/**/*.stories.tsx",
-    "src/**/__test__"
-  ]
+    "declaration": true,
+    "paths": {
+      "@App/*": ["src/*"]
+    }
+  }
 }

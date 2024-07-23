@@ -20,31 +20,16 @@ const StyledButton = styled.button<ButtonProps>`
   display: inline-block;
   color: ${(props) => (props.primary ? "#fff" : "#000")};
   background-color: ${(props) => (props.primary ? "#FF5655" : "#f4c4c4")};
-  padding: ${(props) =>
-    props.size === "small"
-      ? "7px 25px 8px"
-      : props.size === "medium"
-      ? "9px 30px 11px"
-      : "14px 30px 16px"};
+  padding: ${(props) => (props.size === "small" ? "4px 8px" : props.size === "medium" ? "8px 16px" : "12px 24px")};
+  &:hover {
+    background-color: ${(props) => (!props.primary ? "#FF5655" : "#f4c4c4")};
+    color: ${(props) => (!props.primary ? "#fff" : "#000")};
+  }
 `;
 
-const Button: FC<ButtonProps> = ({
-  size,
-  primary,
-  disabled,
-  text,
-  onClick,
-  ...restProps
-}) => {
+const Button: FC<ButtonProps> = ({ size, primary, disabled, text, onClick, ...restProps }) => {
   return (
-    <StyledButton
-      type="button"
-      onClick={onClick}
-      primary={primary}
-      disabled={disabled}
-      size={size}
-      {...restProps}
-    >
+    <StyledButton type="button" onClick={onClick} primary={primary} disabled={disabled} size={size} {...restProps}>
       {text}
     </StyledButton>
   );
