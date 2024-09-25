@@ -24,7 +24,7 @@
     "noFallthroughCasesInSwitch": true,
     "declaration": true,
     "paths": {
-      "@App/*": ["src/*"]
+      "@/*": ["./src/*"]
     }
   }
 }
