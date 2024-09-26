@@ -1,8 +1,8 @@
-import { defineConfig } from "vite";
-import dts from "vite-plugin-dts";
-import { normalizePath } from 'vite'
-import path from 'node:path'
+import path from "node:path";
+import { defineConfig, normalizePath } from "vite";
+import sass from "sass";
 
+import dts from "vite-plugin-dts";
 import { viteStaticCopy as copy } from "vite-plugin-static-copy";
 
 import { peerDependencies, name } from "./package.json";
@@ -26,11 +26,16 @@ export default defineConfig({
     emptyOutDir: true,
   },
   plugins: [
-    dts({
-      // rollupTypes: true
-    }),
+    dts({}),
     copy({
       targets: [{ src: resolve("src/assets"), dest: resolve("dist/assets") }],
     }),
-  ]
+  ],
+  css: {
+    preprocessorOptions: {
+      scss: {
+        implementation: sass,
+      },
+    },
+  },
 });
