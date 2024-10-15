@@ -5,7 +5,7 @@ import { ThemeProvider } from "styled-components";
 
 interface ThemePlaygroundParams extends ThemePlaygroundProps<typeof defaultTheme> {
   theme: typeof defaultTheme;
-  provider: any;
+  provider: unknown;
 }
 
 export const themePlayground: ThemePlaygroundParams = {

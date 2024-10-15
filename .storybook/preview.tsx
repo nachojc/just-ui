@@ -1,6 +1,6 @@
 import React from "react";
 import type { Preview } from "@storybook/react";
-import { ThemeProvider, createGlobalStyle  } from "styled-components";
+import { ThemeProvider  } from "styled-components";
 
 import {defaultTheme, anotherTheme} from "../src/styles/themes";
 import {GlobalStyles} from "../src/styles/global";
@@ -32,8 +32,10 @@ const preview: Preview = {
     },
   },
   decorators: [
-    (Story, { parameters }) => {
-      const { pageLayout } = parameters;
+    (Story,
+      // { parameters }
+    ) => {
+      // const { pageLayout } = parameters
 
       return (
         <div className="page-layout" style={{ padding: 16 }}>
