@@ -1,5 +1,5 @@
-import { createGlobalStyle, withTheme } from 'styled-components';
-import { defaultTheme  } from './themes';
+import { createGlobalStyle, withTheme } from "styled-components";
+import { defaultTheme } from "./themes";
 
 type GlobalThemeProps = {
   theme: typeof defaultTheme;
@@ -42,5 +42,5 @@ const globalStyle = createGlobalStyle`
 
 `;
 
-export const GlobalStyles =  withTheme(globalStyle);
+export const GlobalStyles = withTheme(globalStyle);
 export default GlobalStyles;

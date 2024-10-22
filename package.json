@@ -20,7 +20,9 @@
     "dev": "pnpm storybook:build && pnpm storybook",
     "format": "prettier --write --parser typescript '**/*.{ts,tsx}'",
     "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "prepare": "pnpm build",
+    "preinstall": "npx npm-force-resolutions",
     "storybook": "storybook dev -p 6006",
     "storybook:build": "storybook build",
     "test": "jest",
@@ -83,5 +85,8 @@
   "packageManager": "pnpm@9.11.0",
   "engines": {
     "node": ">=20"
+  },
+  "resolutions": {
+
   }
 }

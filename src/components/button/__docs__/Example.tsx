@@ -18,13 +18,7 @@ const Example: FC<ButtonProps> = ({
         height: "100%",
       }}
     >
-      <Button
-        size={size}
-        text={text}
-        disabled={disabled}
-        onClick={onClick}
-        primary={primary}
-      />
+      <Button size={size} text={text} disabled={disabled} onClick={onClick} primary={primary} />
     </div>
   );
 };

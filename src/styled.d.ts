@@ -1,18 +1,18 @@
-import 'styled-components';
+import "styled-components";
 interface IPalette {
-  main: string
-  contrastText: string
+  main: string;
+  contrastText: string;
 }
-declare module 'styled-components' {
+declare module "styled-components" {
   export interface DefaultTheme {
-    borderRadius: string
+    borderRadius: string;
     palette: {
       common: {
-        black: string
-        white: string
-      }
-      primary: IPalette
-      secondary: IPalette
-   }
+        black: string;
+        white: string;
+      };
+      primary: IPalette;
+      secondary: IPalette;
+    };
   }
 }

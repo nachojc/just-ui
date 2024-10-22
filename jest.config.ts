@@ -1,4 +1,3 @@
-
 module.exports = {
   preset: "ts-jest",
   collectCoverage: true,
@@ -7,7 +6,8 @@ module.exports = {
     "!src/**/*.d.ts",
     "!src/**/index.ts",
     "!src/**/__docs__/*.*",
-    "!**/vendor/**"],
+    "!**/vendor/**",
+  ],
   coverageDirectory: "coverage",
   testEnvironment: "jsdom",
   transform: {

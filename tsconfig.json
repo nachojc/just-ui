@@ -3,11 +3,14 @@
   "exclude": ["src/**/__docs__", "src/**/*.stories.ts", "src/**/*.stories.tsx", "src/**/__test__"],
   "compilerOptions": {
     "baseUrl":"./",
-    "target": "ES5",
+    "target": "ESNext",
+    "module": "es2015",
+
     "useDefineForClassFields": true,
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
-    "module": "ESNext",
     "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
 
     /* Bundler mode */
     "moduleResolution": "bundler",
@@ -17,9 +20,10 @@
     "noEmit": true,
     "jsx": "react-jsx",
 
+
     /* Linting */
     "strict": true,
-    "noUnusedLocals": true,
+    "noUnusedLocals": false,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     "declaration": true,

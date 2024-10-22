@@ -1,6 +1,6 @@
 import globals from "globals";
 import pluginJs from "@eslint/js";
-import tseslint from "typescript-eslint";
+import tsEslint from "typescript-eslint";
 import pluginReact from "eslint-plugin-react";
 
 export default [
@@ -16,7 +16,7 @@ export default [
     languageOptions: { globals: globals.browser },
   },
   pluginJs.configs.recommended,
-  ...tseslint.configs.recommended,
+  ...tsEslint.configs.recommended,
   pluginReact.configs.flat.recommended,
   {
     rules: {
@@ -25,6 +25,6 @@ export default [
     },
   },
   {
-    ignores: ["storybook-static/*", "dist/*"],
+    ignores: ["storybook-static/*", "dist/*", " node_modules/*","coverage"],
   },
 ];

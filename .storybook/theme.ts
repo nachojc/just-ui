@@ -1,4 +1,4 @@
-import { ThemePlaygroundProps } from "storybook-addon-theme-playground";
+import type { ThemePlaygroundProps } from "storybook-addon-theme-playground";
 
 import { defaultTheme, anotherTheme } from "../src/styles/themes";
 import { ThemeProvider } from "styled-components";
