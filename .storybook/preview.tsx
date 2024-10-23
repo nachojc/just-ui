@@ -1,8 +1,8 @@
 import type { Preview } from "@storybook/react";
 import { ThemeProvider } from "styled-components";
 
-import { defaultTheme, anotherTheme } from "../src/styles/themes";
-import { GlobalStyles } from "../src/styles/global";
+import { defaultTheme, secondaryTheme } from "../src/styles/themes";
+import { GlobalStyles } from "./GlobalStyles";
 import React from "react";
 
 const preview: Preview = {
@@ -16,7 +16,7 @@ const preview: Preview = {
     themePlayground: {
       theme: [
         { name: "Default Theme", theme: defaultTheme },
-        { name: "Another Theme", theme: anotherTheme },
+        { name: "Secondary Theme", theme: secondaryTheme },
       ],
       provider: ({ children, theme, name }) => {
         console.log("Current theme is: ", name);

@@ -1,13 +1,13 @@
-import { ReactNode } from "react"
-import { ThemeProvider } from "styled-components"
-import {defaultTheme as theme} from '../styles/themes/default';
+import { ReactNode } from "react";
+import { ThemeProvider } from "styled-components";
+import theme from "../styles/themes";
 
-export const  wrapWithTheme = ( children: ReactNode) => {
+type ThemeName = keyof typeof theme;
 
-    return <ThemeProvider theme={theme}>
-      { children }
-    </ThemeProvider>
-
-
-
-}
+type options = {
+  themeName: ThemeName;
+};
+export const wrapWithTheme = (children: ReactNode, options?: options) => {
+  const opt: options = { ...{ themeName: "defaultTheme" }, ...options };
+  return <ThemeProvider theme={theme[opt.themeName]}>{children}</ThemeProvider>;
+};

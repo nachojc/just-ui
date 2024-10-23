@@ -1,5 +1,5 @@
 import { createGlobalStyle, withTheme } from "styled-components";
-import { defaultTheme } from "./themes";
+import { defaultTheme } from "../src/styles/themes";
 
 type GlobalThemeProps = {
   theme: typeof defaultTheme;

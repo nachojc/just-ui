@@ -15,6 +15,4 @@ export const defaultTheme: DefaultTheme = {
       contrastText: "#ffffff",
     },
   },
-} as DefaultTheme;
-
-export default defaultTheme;
+};
