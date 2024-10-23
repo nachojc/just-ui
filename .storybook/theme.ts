@@ -1,14 +1,14 @@
-import type { ThemePlaygroundProps } from "storybook-addon-theme-playground";
+// import type { ThemePlaygroundProps } from "storybook-addon-theme-playground";
 
 import { defaultTheme, secondaryTheme } from "../src/styles/themes";
 import { ThemeProvider } from "styled-components";
 
-interface ThemePlaygroundParams extends ThemePlaygroundProps<typeof defaultTheme> {
-  theme: typeof defaultTheme;
-  provider: unknown;
-}
+// interface ThemePlaygroundParams extends ThemePlaygroundProps<typeof defaultTheme> {
+//   theme: typeof defaultTheme;
+//   provider: unknown;
+// }
 
-export const themePlayground: ThemePlaygroundParams = {
+export const themePlayground: unknown = {
   theme: [
     { name: "Default Theme", theme: defaultTheme },
     { name: "Secondary Theme", theme: secondaryTheme },
