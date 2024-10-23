@@ -17,11 +17,11 @@
   ],
   "scripts": {
     "build": "tsc && vite build",
-    "dev": "npm storybook:build && npm storybook",
+    "dev": "npm run storybook:build && npm run storybook",
     "format": "prettier --write --parser typescript '**/*.{ts,tsx}'",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "prepare": "npm build",
+    "prepare": "npm run build",
     "storybook": "storybook dev -p 6006",
     "storybook:build": "storybook build",
     "test": "jest",
