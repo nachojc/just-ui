@@ -2,18 +2,14 @@ import { forwardRef } from "react";
 import type { ButtonProps } from "./types";
 import { StyledButton } from "./style";
 
-const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button(
-  { size, primary, disabled, text, onClick, ...restProps },
+export const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button(
+  { text, ...restProps },
   ref,
 ) {
   return (
     <StyledButton
       ref={ref}
       type="button"
-      onClick={onClick}
-      primary={primary}
-      disabled={disabled}
-      size={size}
       {...restProps}
     >
       {text}
