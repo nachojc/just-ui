@@ -12,13 +12,13 @@ const ThemeOptions = Object.entries(ThemeValues)
     title,
   }));
 
-export const themeDecorator = (Story, { parameters, globals }) => {
-  const themeVal = parameters.theme || globals.theme;
+export const themeDecorator = (Story, { parameters: {theme, pageLayout }, globals }) => {
+  const themeVal = theme || globals.theme;
   const storyTheme = themeVal === ThemeValues.Default ? defaultTheme : secondaryTheme;
 
   return (
     <ThemeProvider theme={storyTheme}>
-      <div className="page-layout" style={{ padding: 16 }}>
+      <div className={`${pageLayout}-layout`} style={{ padding: 16 }}>
         <GlobalStyles />
         <Story />
       </div>
