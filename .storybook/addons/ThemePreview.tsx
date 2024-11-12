@@ -6,11 +6,11 @@ import React from "react";
 
 const ThemeValues = { Default: "def", Secondary: "sec" };
 
-const ThemeOptions = Object.keys(ThemeValues).map((item, i) => ({
-  value: ThemeValues[item],
-  icon: "circle",
-  title: item,
-}));
+const ThemeOptions = Object.entries(ThemeValues)
+  .map(([title, value]) => ({
+    value,
+    title,
+  }));
 
 export const themeDecorator = (Story, { parameters, globals }) => {
   const themeVal = parameters.theme || globals.theme;
@@ -29,10 +29,9 @@ export const themeDecorator = (Story, { parameters, globals }) => {
 export const theme = {
   title: "Theme",
   description: "Global theme for components",
-  defaultValue: ThemeValues.Default,
-  dynamicTitle: false,
+  dynamicTitle: true,
   toolbar: {
-    icon: "circle",
+    icon: "paintbrush",
     items: ThemeOptions,
     showName: true,
   },
@@ -61,5 +60,5 @@ export const decorators = [themeDecorator];
 
 export const initialGlobals = {
   theme: ThemeValues.Default,
-  locale: 'en',
-}
+  locale: "en",
+};
