@@ -1,18 +1,17 @@
 import type { DefaultTheme } from "styled-components";
-import { colorPalette } from "./default/colors";
-
-
-
+import { colorPalette, colorPrimitive } from "./default/colors";
 
 export const defaultTheme: DefaultTheme = {
-  font: '',
+  font: "",
   borderRadius: "4px",
-  color:{
+  background: '#fff',
+  color: {
     primary: colorPalette.white,
     secondary: colorPalette.secondary,
-    tertiary: colorPalette.white
+    tertiary: colorPalette.white,
   },
   palette: {
+    colors: colorPrimitive,
     common: {
       black: "#222831",
       white: "#ffffff",

@@ -12,6 +12,7 @@ declare module "styled-components" {
       tertiary: string;
     };
     palette: {
+      colors:{[key:string]: string},
       common: {
         black: string;
         white: string;

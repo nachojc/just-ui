@@ -14,7 +14,6 @@ export const StyledButton = styled.button<ButtonProps>`
   font-weight: bold;
   border-radius: 10px;
   display: inline-block;
-  color: ${(props)=> props.theme.palette.};
   &:hover {
     background-color: ${(props) => (!props.primary ? "#FF5655" : "#f4c4c4")};
     color: ${(props) => (!props.primary ? "#fff" : "#000")};

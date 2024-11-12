@@ -8,11 +8,13 @@ const config: StorybookConfig = {
     "@storybook/addon-essentials",
     "@chromatic-com/storybook",
     "@storybook/addon-interactions",
-    "storybook-addon-theme-playground",
+    // "storybook-addon-theme-playground",
+    // "./addons/theme/register"
   ],
   framework: {
     name: "@storybook/react-vite",
     options: {},
   },
+  staticDirs: [ './assets'],
 };
 export default config;
