@@ -10,15 +10,13 @@ export const colorButton = {
       color: colorPrimitive["text-red-500"],
     },
     hover: {
-        color: colorPrimitive["text-red-600"],
-
+      color: colorPrimitive["text-red-600"],
     },
     active: {
-        color: colorPrimitive["text-red-700"],
-
+      color: colorPrimitive["text-red-700"],
     },
     disabled: {
-        color: colorPrimitive["text-red-300"],
-    }
+      color: colorPrimitive["text-red-300"],
+    },
   },
 };

@@ -4,7 +4,7 @@ import { colorPalette, colorPrimitive } from "./default/colors";
 export const defaultTheme: DefaultTheme = {
   font: "",
   borderRadius: "4px",
-  background: '#fff',
+  background: "#fff",
   color: {
     primary: colorPalette.white,
     secondary: colorPalette.secondary,

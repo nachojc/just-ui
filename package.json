@@ -17,6 +17,7 @@
   ],
   "scripts": {
     "build": "tsc && vite build",
+    "build:pro": "tsc && vite build  --sourcemap false",
     "dev": "npm run storybook:build && npm run storybook",
     "format": "prettier --write --parser typescript '**/*.{ts,tsx}'",
     "lint": "eslint .",

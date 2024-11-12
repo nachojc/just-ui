@@ -3,16 +3,17 @@ import { ThemeProvider } from "styled-components";
 import { defaultTheme, secondaryTheme } from "../../src/styles/themes";
 import { GlobalStyles } from "./GlobalStyles";
 import React from "react";
+import type { DecoratorFunction } from "storybook/internal/types";
+import type { ReactRenderer } from "@storybook/react";
 
 const ThemeValues = { Default: "def", Secondary: "sec" };
 
-const ThemeOptions = Object.entries(ThemeValues)
-  .map(([title, value]) => ({
-    value,
-    title,
-  }));
+const ThemeOptions = Object.entries(ThemeValues).map(([title, value]) => ({
+  value,
+  title,
+}));
 
-export const themeDecorator = (Story, { parameters: {theme, pageLayout }, globals }) => {
+const themeDecorator = (Story, { parameters: { theme, pageLayout }, globals }) => {
   const themeVal = theme || globals.theme;
   const storyTheme = themeVal === ThemeValues.Default ? defaultTheme : secondaryTheme;
 
@@ -26,7 +27,7 @@ export const themeDecorator = (Story, { parameters: {theme, pageLayout }, global
   );
 };
 
-export const theme = {
+const theme = {
   title: "Theme",
   description: "Global theme for components",
   dynamicTitle: true,
@@ -56,7 +57,20 @@ export const globalTypes = {
   // locale
 };
 
-export const decorators = [themeDecorator];
+export const decorators = [themeDecorator] as unknown as
+  | DecoratorFunction<
+      ReactRenderer,
+      {
+        [x: string]: unknown;
+      }
+    >
+  | DecoratorFunction<
+      ReactRenderer,
+      {
+        [x: string]: unknown;
+      }
+    >[]
+  | undefined;
 
 export const initialGlobals = {
   theme: ThemeValues.Default,

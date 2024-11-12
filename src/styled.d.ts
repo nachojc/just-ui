@@ -6,13 +6,13 @@ interface IPalette {
 declare module "styled-components" {
   export interface DefaultTheme {
     borderRadius: string;
-    color:{
+    color: {
       primary: string;
       secondary: string;
       tertiary: string;
     };
     palette: {
-      colors:{[key:string]: string},
+      colors: { [key: string]: string };
       common: {
         black: string;
         white: string;
