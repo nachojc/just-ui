@@ -1,8 +1,9 @@
 import type { DefaultTheme } from "styled-components";
 import { colorPalette, colorPrimitive } from "./default/colors";
+import { font } from "./default/fonts";
+import { components } from "./default/components";
 
 export const defaultTheme: DefaultTheme = {
-  font: "",
   borderRadius: "4px",
   background: "#fff",
   color: {
@@ -25,4 +26,6 @@ export const defaultTheme: DefaultTheme = {
       contrastText: "#ffffff",
     },
   },
+  components,
+  font
 };

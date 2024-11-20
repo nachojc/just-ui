@@ -111,7 +111,20 @@ export const colorPrimitive = {
   "text-red-700": "#b02d2d",
 };
 
+
+export const buttonColors={
+  'btn-red-100':'#fbcece',
+  'btn-red-200':'#f8bbbb',
+  'btn-red-300':'#f8b2b3',
+  'btn-red-500':'#F36768',
+  'btn-red-600':'#c45a5b',
+  'btn-red-700':'#ea3536',
+  'btn-red-900':'#b02d2d',
+}
+
 export const colorPalette = {
   white: "#ffffff",
   secondary: colorPrimitive["text-red-500"],
+  primary: '#F36768',
+
 };
