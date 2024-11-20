@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button render disabled 1`] = `
+<button
+  className="sc-braxZu dCynAv"
+  disabled={true}
+  variant="secondary"
+/>
+`;
+
+exports[`Button render primary small 1`] = `
+<button
+  className="sc-braxZu fcEAvZ"
+  size="small"
+  variant="primary"
+/>
+`;
+
+exports[`Button render tertiary large 1`] = `
+<button
+  className="sc-braxZu gpPWwK"
+  size="large"
+  variant="tertiary"
+/>
+`;

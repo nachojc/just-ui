@@ -22,9 +22,10 @@ export default [
     rules: {
       "react/react-in-jsx-scope": "off",
       "react/jsx-uses-react": "off",
+      "@typescript-eslint/ban-ts-comment": "off",
     },
   },
   {
-    ignores: ["storybook-static/*", "dist/*", " node_modules/*","coverage"],
+    ignores: ["storybook-static/*", "dist/*", " node_modules/*", "coverage"],
   },
 ];

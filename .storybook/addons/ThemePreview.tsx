@@ -8,7 +8,8 @@ import type { ReactRenderer } from "@storybook/react";
 
 const ThemeValues = {
   Default: { value: "def", theme: defaultTheme },
-  Secondary: { value: "sec", theme: publicTheme } };
+  Secondary: { value: "sec", theme: publicTheme },
+};
 
 const ThemeOptions = Object.entries(ThemeValues).map(([title, value]) => ({
   value,
