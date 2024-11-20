@@ -1,12 +1,14 @@
 import { ThemeProvider } from "styled-components";
 
-import { defaultTheme, secondaryTheme } from "../../src/styles/themes";
+import { defaultTheme, publicTheme } from "../../src/styles/themes";
 import { GlobalStyles } from "./GlobalStyles";
 import React from "react";
 import type { DecoratorFunction } from "storybook/internal/types";
 import type { ReactRenderer } from "@storybook/react";
 
-const ThemeValues = { Default: "def", Secondary: "sec" };
+const ThemeValues = {
+  Default: { value: "def", theme: defaultTheme },
+  Secondary: { value: "sec", theme: publicTheme } };
 
 const ThemeOptions = Object.entries(ThemeValues).map(([title, value]) => ({
   value,
@@ -15,7 +17,7 @@ const ThemeOptions = Object.entries(ThemeValues).map(([title, value]) => ({
 
 const themeDecorator = (Story, { parameters: { theme, pageLayout }, globals }) => {
   const themeVal = theme || globals.theme;
-  const storyTheme = themeVal === ThemeValues.Default ? defaultTheme : secondaryTheme;
+  const storyTheme = themeVal.theme;
 
   return (
     <ThemeProvider theme={storyTheme}>

@@ -1,7 +1,7 @@
 import { defaultTheme } from "./default";
-import { secondaryTheme } from "./secondary";
+import { publicTheme } from "./public";
 
 export type defaultThemeType = typeof defaultTheme;
 
-export { defaultTheme, secondaryTheme };
-export default { defaultTheme, secondaryTheme };
+export { defaultTheme, publicTheme };
+export default { defaultTheme, publicTheme };

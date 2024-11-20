@@ -1,4 +1,4 @@
-import { colorPalette, colorPrimitive, buttonColors } from "../colors";
+import { colorPalette, colors } from "../colors";
 import { font } from "../fonts";
 
 export const button = {
@@ -17,33 +17,33 @@ export const button = {
     default: {
       background: colorPalette.white,
       border: `1px solid ${colorPalette.white}`,
-      color: colorPrimitive["text-red-500"],
+      color: colors["text-red-500"],
     },
 
     hover: {
-      color: colorPrimitive["text-red-600"],
+      color: colors["text-red-600"],
     },
     active: {
-      color: colorPrimitive["text-red-700"],
+      color: colors["text-red-700"],
     },
     disabled: {
-      color: colorPrimitive["text-red-300"],
+      color: colors["text-red-300"],
     },
   },
   primary: {
     default: {
-      background: buttonColors["btn-red-500"],
+      background: colors["btn-red-500"],
       color: colorPalette.white,
-      "border-color": buttonColors["btn-red-500"],
+      "border-color": colors["btn-red-500"],
     },
     disabled: {
-      background: buttonColors["btn-red-100"],
+      background: colors["btn-red-100"],
     },
     hover: {
-      background: buttonColors["btn-red-300"],
+      background: colors["btn-red-300"],
     },
     active: {
-      background: buttonColors["btn-red-600"],
+      background: colors["btn-red-600"],
     },
   },
   secondary: {
