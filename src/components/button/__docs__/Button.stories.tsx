@@ -45,4 +45,3 @@ export const Tertiary: Story = {
   },
   render: (args) => <Button {...args}>Tertiary</Button>,
 };
-

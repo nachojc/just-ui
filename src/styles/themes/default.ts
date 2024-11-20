@@ -27,5 +27,5 @@ export const defaultTheme: DefaultTheme = {
     },
   },
   components,
-  font
+  font,
 };

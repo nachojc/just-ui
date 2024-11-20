@@ -5,7 +5,7 @@ import type { ButtonProps } from "../types";
 const Example: FC<ButtonProps> = ({
   disabled = false,
   onClick = () => {},
-  variant = 'primary',
+  variant = "primary",
   size = "small",
   text = "Button",
 }) => {
