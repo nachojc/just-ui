@@ -5,9 +5,7 @@ import type { ButtonProps } from "./types";
 
 export const StyledButton = styled.button<ButtonProps>`
   ${(props) => props.theme.components.button.default}
-  ${(props) =>
-
-    props.theme.components.button[props.variant]?.default}
+  ${(props) => props.theme.components.button[props.variant]?.default}
   ${(props) => props.disabled && props.theme.components.button[props.variant]?.disabled}
   ${(props) => {
     switch (props.size) {

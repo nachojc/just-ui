@@ -1,5 +1,4 @@
 import { render } from "@testing-library/react";
-import { create } from "react-test-renderer";
 import { Button } from "../";
 import React from "react";
 import { wrapWithTheme } from "../../../utils/ThemeWrapper";
@@ -14,18 +13,21 @@ describe("Button", () => {
     expect(btn).toBeTruthy();
   });
   it("render primary small", async () => {
-    const btn = create(wrapWithTheme(<Button variant="primary" size="small"/>));
+    const { asFragment } = render(wrapWithTheme(<Button variant="primary" size="small" />));
+    const btn = asFragment();
 
-    expect(btn.toJSON()).toMatchSnapshot();
+    expect(btn).toMatchSnapshot();
   });
   it("render tertiary large", async () => {
-    const btn = create(wrapWithTheme(<Button variant="tertiary" size="large"/>));
+    const { asFragment } = render(wrapWithTheme(<Button variant="tertiary" size="large" />));
+    const btn = asFragment();
 
-    expect(btn.toJSON()).toMatchSnapshot();
+    expect(btn).toMatchSnapshot();
   });
   it("render disabled", async () => {
-    const btn = create(wrapWithTheme(<Button disabled/>));
+    const { asFragment } = render(wrapWithTheme(<Button disabled />));
+    const btn = asFragment();
 
-    expect(btn.toJSON()).toMatchSnapshot();
+    expect(btn).toMatchSnapshot();
   });
 });

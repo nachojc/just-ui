@@ -10,5 +10,5 @@ export const publicTheme: DefaultTheme = merge(cloneDeep(theme), {
       black: "#000000",
     },
   },
-  colors: colorPrimitive
+  colors: colorPrimitive,
 });
