@@ -1,0 +1,35 @@
+import { Canvas, Meta } from "@storybook/blocks";
+import Example from "./Example.tsx";
+import * as Icon from "./Icon.stories.tsx";
+
+<Meta of={Icon} title="Icon" />
+
+# Icon
+
+Icon component with different props.
+
+#### Example
+
+<Canvas of={Icon.Default} />
+
+## Usage
+
+```ts
+import {Icon} from "@just/ui-components";
+
+const Example = () => {
+  return (
+      <Icon
+        name={"account"}
+        onClick={()=> console.log("Clicked")}
+      />
+  );
+};
+
+export default Example;
+```
+
+#### Arguments
+
+- **name** _  A string with possible values includes in icons.ts.
+- default SGV properties by ref

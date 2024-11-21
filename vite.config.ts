@@ -28,7 +28,7 @@ export default defineConfig({
   plugins: [
     dts({}),
     copy({
-      targets: [{ src: resolve("src/assets"), dest: resolve("dist/assets") }],
+      targets: [{ src: resolve("src/assets"), dest: resolve("dist") }],
     }),
   ],
   css: {

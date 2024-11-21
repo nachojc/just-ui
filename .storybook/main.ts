@@ -8,13 +8,28 @@ const config: StorybookConfig = {
     "@storybook/addon-essentials",
     "@chromatic-com/storybook",
     "@storybook/addon-interactions",
-    // "storybook-addon-theme-playground",
-    // "./addons/theme/register"
   ],
   framework: {
     name: "@storybook/react-vite",
     options: {},
   },
-  staticDirs: ["./assets"],
+  docs: { autodocs: true },
+  staticDirs: [{ from: "./assets", to: '/assets'}],
+  async viteFinal(config) {
+    const { mergeConfig } = await import('vite');
+
+    return mergeConfig(config, {
+      // Add dependencies to pre-optimization
+      optimizeDeps: {
+        // include: ['storybook-dark-mode'],
+      },
+    });
+  },
+  typescript: {
+    check: true,
+  // Enables the `react-docgen-typescript` parser.
+  // See https://storybook.js.org/docs/api/main-config/main-config-typescript for more information about this option.
+  //   reactDocgen: 'react-docgen-typescript',
+  },
 };
 export default config;
