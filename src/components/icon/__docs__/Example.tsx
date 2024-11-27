@@ -2,14 +2,15 @@ import React, { type FC } from "react";
 import Icon from "../icon";
 import type { IconProps } from "../types";
 
-const Example: FC<IconProps> = ({ name = "account" }) => {
+const Example: FC<IconProps> = ({ name = "AccountIcon" }) => {
   return (
     <div
       style={{
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        height: "100%",
+        width: "64px",
+        height: "64px",
       }}
     >
       <Icon name={name} />

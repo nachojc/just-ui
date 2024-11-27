@@ -14,9 +14,9 @@ const config: StorybookConfig = {
     options: {},
   },
   docs: { autodocs: true },
-  staticDirs: [{ from: "./assets", to: '/assets'}],
+  staticDirs: [{ from: "./assets", to: "/assets" }],
   async viteFinal(config) {
-    const { mergeConfig } = await import('vite');
+    const { mergeConfig } = await import("vite");
 
     return mergeConfig(config, {
       // Add dependencies to pre-optimization
@@ -27,9 +27,9 @@ const config: StorybookConfig = {
   },
   typescript: {
     check: true,
-  // Enables the `react-docgen-typescript` parser.
-  // See https://storybook.js.org/docs/api/main-config/main-config-typescript for more information about this option.
-  //   reactDocgen: 'react-docgen-typescript',
+    // Enables the `react-docgen-typescript` parser.
+    // See https://storybook.js.org/docs/api/main-config/main-config-typescript for more information about this option.
+    //   reactDocgen: 'react-docgen-typescript',
   },
 };
 export default config;

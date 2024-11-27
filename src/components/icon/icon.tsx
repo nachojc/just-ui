@@ -1,6 +1,5 @@
 import { FC, SVGAttributes } from "react";
-import { IconProps } from "./types";
-import { iconFile } from "./icons";
+import { IconProps, iconFile } from "./types";
 
 export const Icon: FC<IconProps> = ({ name, ...props }) => {
   let SvgIcon = iconFile[name];
