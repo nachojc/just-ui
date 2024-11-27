@@ -2,6 +2,8 @@ import type { DefaultTheme } from "styled-components";
 import { colorPalette, colors } from "./colors";
 import { font } from "./fonts";
 import { components } from "./components";
+import { size } from "./size";
+import { radius } from "./radius";
 
 export const defaultTheme: DefaultTheme = {
   borderRadius: "4px",
@@ -26,6 +28,8 @@ export const defaultTheme: DefaultTheme = {
       contrastText: "#ffffff",
     },
   },
-  components,
   font,
+  size,
+  radius,
+  components,
 };

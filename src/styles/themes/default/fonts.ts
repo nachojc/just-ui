@@ -4,3 +4,5 @@ export const font = {
   italic: `"Just Sans Italic", sans-serif;`,
   script: `"Just Script", sans-serif;`,
 };
+
+export type Font = keyof typeof font;
