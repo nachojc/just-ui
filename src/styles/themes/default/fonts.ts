@@ -5,4 +5,4 @@ export const font = {
   script: `"Just Script", sans-serif;`,
 };
 
-export type Font = keyof typeof font;
+export type Font = typeof font;

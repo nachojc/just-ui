@@ -1,5 +1,5 @@
-import { Font } from "@/styles/themes/default/fonts";
-import { Size } from "@/styles/themes/default/size";
+import type { Font } from "@/styles/themes/default/fonts";
+import type { Size } from "@/styles/themes/default/size";
 import "styled-components";
 interface IPalette {
   main: string;
@@ -9,7 +9,7 @@ interface IPalette {
 declare module "styled-components" {
   export interface DefaultTheme {
     size: Size;
-    font: Font
+    font: Font;
     color: {
       primary: string;
       secondary: string;
