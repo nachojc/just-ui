@@ -1,4 +1,4 @@
-import { FC, SVGAttributes } from "react";
+import React, { FC, SVGAttributes } from "react";
 
 export const __NAME__: FC<SVGAttributes<SVGElement>> = (props) => {
   return __SVG__;

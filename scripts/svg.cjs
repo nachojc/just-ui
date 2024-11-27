@@ -13,7 +13,7 @@ const nameComponentTemplate = "__NAME__";
 
 const listFileNames = readdirSync(initFolder);
 const camelListNames = listFileNames
-  .map((item) => camelCase(item.substring(0, item.length - 3)))
+  .map((item) => camelCase(item.substring(0, item.length - 4)))
   .map((item) => item[0].toUpperCase().concat(item.substring(1)));
 
 if (!existsSync(finalFolder)) {
@@ -22,13 +22,14 @@ if (!existsSync(finalFolder)) {
 if (existsSync(templateFile)) {
   const template = readFileSync(templateFile, { encoding: "utf8" });
 
+  const finalFilesName = listFileNames.map((file) => file.substring(0, file.length - 4).concat(".tsx"));
   const nameReg = new RegExp(nameComponentTemplate, "g");
   const svgReg = new RegExp(svgComponentTemplate, "g");
   listFileNames.forEach((file, i) => {
-    const initSvg = readFileSync(join(initFolder, file));
+    const initSvg = readFileSync(join(initFolder, file)).toString();
     writeFileSync(
-      join(finalFolder, file.substring(0, file.length - 3).concat(".tsx")),
-      template.replace(nameReg, camelListNames[i]).replace(svgReg, initSvg),
+      join(finalFolder, finalFilesName[i]),
+      template.replace(nameReg, camelListNames[i]).replace(svgReg, initSvg.replace(">", " {...props}>")),
     );
     // console.log(camelListNames[i]);
   });
