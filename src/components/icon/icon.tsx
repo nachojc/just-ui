@@ -11,8 +11,6 @@ export const Icon: FC<IconProps> = ({ name, ...props }) => {
   if (typeof SvgIcon === "function") {
     return <SvgIcon {...{ ...defaultSvgProps, ...props }} />;
   }
-
-  throw new Error(`Icon '${name}' was not found.`);
 };
 
 export default Icon;
