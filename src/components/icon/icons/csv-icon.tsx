@@ -4,8 +4,6 @@ export const CsvIcon = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     xmlSpace="preserve"
-    width={24}
-    height={24}
     fill="currentColor"
     viewBox="0 0 115.28 122.88"
     {...props}

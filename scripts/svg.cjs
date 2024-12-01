@@ -36,6 +36,7 @@ const execSvgr = (initFolder, finalFolder) => {
         plugins: ["@svgr/plugin-svgo", "@svgr/plugin-jsx", "@svgr/plugin-prettier"],
         icon: false,
         typescript: true,
+        dimensions: false,
       },
       { componentName: camelListNames[i] },
     );
