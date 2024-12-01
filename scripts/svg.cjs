@@ -10,10 +10,11 @@ const { camelCase } = require("lodash");
 
 const getIndexFile = (listFiles, listNames) => {
   let result = "";
+
   listFiles.forEach((file, i) => {
-    result += `export * as ${listNames[i]} from "./${file}";
-    `;
+    result += `export { ${listNames[i]} } from "./${file}";\n`;
   });
+
   return result;
 };
 
@@ -39,7 +40,7 @@ const execSvgr = (initFolder, finalFolder) => {
       { componentName: camelListNames[i] },
     );
 
-    writeFileSync(join(finalFolder, listFileNames[i]), jsCode);
+    writeFileSync(join(finalFolder, listFileNames[i]), jsCode.replace("const ", "export const "));
   });
 
   const indexFile = getIndexFile(listFileNames, camelListNames);
@@ -48,4 +49,4 @@ const execSvgr = (initFolder, finalFolder) => {
 
 module.exports = { execSvgr };
 
-execSvgr("scripts/icons", "scripts/tempIcons");
+execSvgr("scripts/icons", "src/components/icon/icons");

@@ -1,6 +1,5 @@
 import { FC, SVGAttributes } from "react";
 import * as iconComponents from "./icons";
-// import * as iconComponents from "../../../scripts/finalIcon";
 
 export type IconName = keyof typeof iconFile;
 export type IconProps = SVGAttributes<SVGElement> & { name: IconName };
