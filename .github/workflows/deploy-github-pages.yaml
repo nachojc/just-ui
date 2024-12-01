@@ -23,21 +23,45 @@ concurrency:
 
 jobs:
   # Single deploy job since we're just deploying
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "20" # Use a Node.js version that supports ES Modules
+          registry-url: "https://registry.npmjs.org"
+
+      - name: Install Dependencies
+        run: yarn install
+
+      - name: Build Package
+        run: yarn storybook:build
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          name: "github-pages"
+          path: "storybook-static"
+
   deploy:
+    needs: build
+    permissions:
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          # Upload entire repository
-          path: "./storybook-static"
+      - name: Configure Pages
+        uses: actions/configure-pages@v4
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
