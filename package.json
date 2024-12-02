@@ -23,6 +23,7 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "prepare": "husky",
+    "import:icons": "node ./scripts/svg.cjs",
     "storybook": "storybook dev -p 6006",
     "storybook:build": "storybook build",
     "test": "jest",
