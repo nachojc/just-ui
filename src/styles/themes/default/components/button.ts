@@ -9,6 +9,7 @@ export const button = {
     "line-height": "24px",
     "font-size": "15px",
     "font-family": font.sans,
+    "letter-spacing": "0.075rem",
     cursor: "pointer",
     "font-weight": "bold",
     display: "inline-block",
@@ -35,6 +36,7 @@ export const button = {
       background: colors["btn-red-500"],
       color: colorPalette.white,
       "border-color": colors["btn-red-500"],
+      "box-shadow": "inset 0 -3px 0 0 rgba(55, 52, 51, 0.32)",
     },
     disabled: {
       background: colors["btn-red-100"],
