@@ -4,7 +4,7 @@ import { size } from "../size";
 
 export const button = {
   default: {
-    padding: `${size["md"]} ${size["xl"]}`,
+    padding: `${size["xl"]}`,
     border: `${size["xxs"]} solid`,
     "border-radius": size["sm"],
     "line-height": size["xxl"],
@@ -13,7 +13,9 @@ export const button = {
     "letter-spacing": ".075rem",
     cursor: "pointer",
     "font-weight": "bold",
-    display: "inline-block",
+    display: "flex",
+    "align-items": "center",
+    "justify-content": "center",
   },
   tertiary: {
     default: {
