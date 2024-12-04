@@ -1,15 +1,16 @@
 import { colorPalette, colors } from "../colors";
 import { font } from "../fonts";
+import { size } from "../size";
 
 export const button = {
   default: {
-    padding: "8px 16px",
-    border: "1px solid",
-    "border-radius": "10px",
-    "line-height": "24px",
-    "font-size": "15px",
+    padding: `${size["md"]} ${size["xl"]}`,
+    border: `${size["xxs"]} solid`,
+    "border-radius": size["sm"],
+    "line-height": size["xxl"],
+    "font-size": size["xl-"],
     "font-family": font.sans,
-    "letter-spacing": "0.075rem",
+    "letter-spacing": ".075rem",
     cursor: "pointer",
     "font-weight": "bold",
     display: "inline-block",

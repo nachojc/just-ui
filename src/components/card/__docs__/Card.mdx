@@ -1,0 +1,38 @@
+import { Canvas, Meta } from "@storybook/blocks";
+import Example from "./Example.tsx";
+import * as Card from "./Card.stories.tsx";
+
+<Meta of={Card} title="Card" />
+
+# Card
+
+Card component with different props.
+
+#### Example
+
+<Canvas of={Card.FullExample} />
+
+## Usage
+
+```ts
+import {Card} from "@just/ui-components";
+
+const Example = () => {
+  return (
+      <Card>
+        <CardTitle onClose={onClose}>Title</CardTitle>
+      </Card>
+  );
+};
+
+export default Example;
+```
+
+#### Arguments
+
+- **title** - A string that represents the text content of the title.
+- **variant** - A string with one of three possible values: 'primary', 'secondary', 'tertiary' by default is 'secondary'.
+- **disabled** - A boolean indicating whether the button should be disabled or not. When disabled, the button cannot be clicked or interacted with.
+- **size** - A string with one of three possible values: "small," "medium," or "large." It defines the size or dimensions of the button.
+- **onCllose** - A function that is called when the close is clicked.
+- default div properties by ref
