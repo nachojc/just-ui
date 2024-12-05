@@ -3,7 +3,7 @@
 exports[`Button render disabled 1`] = `
 <DocumentFragment>
   <button
-    class="sc-blHHSb sc-gtLWhw jjIrRF khJxqe"
+    class="sc-blHHSb sc-gtLWhw jjIrRF bCHNzq"
     disabled=""
     variant="secondary"
   >
@@ -17,7 +17,7 @@ exports[`Button render disabled 1`] = `
 exports[`Button render primary small 1`] = `
 <DocumentFragment>
   <button
-    class="sc-blHHSb sc-gtLWhw bXlivv blKddV"
+    class="sc-blHHSb sc-gtLWhw bXlivv eyOGpV"
     variant="primary"
   >
     <span
@@ -30,7 +30,7 @@ exports[`Button render primary small 1`] = `
 exports[`Button render tertiary large 1`] = `
 <DocumentFragment>
   <button
-    class="sc-blHHSb sc-gtLWhw hWgJtU fZaaaN"
+    class="sc-blHHSb sc-gtLWhw hWgJtU heMgUV"
     variant="tertiary"
   >
     <span

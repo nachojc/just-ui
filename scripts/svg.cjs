@@ -50,4 +50,4 @@ const execSvgr = (initFolder, finalFolder) => {
 
 module.exports = { execSvgr };
 
-execSvgr("scripts/icons", "src/components/icon/icons");
+execSvgr("sources/icons", "src/components/icon/importIcons");

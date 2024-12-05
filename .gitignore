@@ -1,7 +1,11 @@
 node_modules
 dist
+lib
 coverage
 
 #storybook build directory
 storybook-static
 *storybook.log
+
+
+.DS_Store

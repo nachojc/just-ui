@@ -10,13 +10,16 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button
 ) {
   return (
     <StyledButton ref={ref} variant={variant} {...restProps}>
-      {iconLeft &&
-        (typeof iconLeft === "string" ? <Icon width={48} height={48} name={iconLeft as IconName} /> : iconLeft)}
+      {iconLeft && (
+        <div className="left">
+          {typeof iconLeft === "string" ? <Icon width={48} height={48} name={iconLeft as IconName} /> : iconLeft}
+        </div>
+      )}
       {text || children}
-      {iconRight && typeof iconRight === "string" ? (
-        <Icon width={48} height={48} name={iconRight as IconName} />
-      ) : (
-        iconRight
+      {iconRight && (
+        <div className="right">
+          {typeof iconRight === "string" ? <Icon width={48} height={48} name={iconRight as IconName} /> : iconRight}
+        </div>
       )}
     </StyledButton>
   );
