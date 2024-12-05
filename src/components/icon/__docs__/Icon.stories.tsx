@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { Icon } from "..";
 import React from "react";
-import { IconName, IconNameKey } from "../types";
+import { IconNameKey } from "../types";
 
 type Story = StoryObj<typeof Icon>;
 
