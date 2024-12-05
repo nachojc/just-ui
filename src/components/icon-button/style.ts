@@ -15,4 +15,7 @@ export const StyledIconButton = styled<PropsWithChildren<IconButtonProps>>(Style
           return { width: "100%" };
       }
     }};
+  .icon {
+    line-height: 1;
+  }
 `;

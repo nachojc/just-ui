@@ -3,27 +3,39 @@
 exports[`Button render disabled 1`] = `
 <DocumentFragment>
   <button
-    class="sc-blHHSb cSkiXb"
+    class="sc-blHHSb sc-gtLWhw jjIrRF khJxqe"
     disabled=""
     variant="secondary"
-  />
+  >
+    <span
+      class="icon"
+    />
+  </button>
 </DocumentFragment>
 `;
 
 exports[`Button render primary small 1`] = `
 <DocumentFragment>
   <button
-    class="sc-blHHSb dCeyxJ"
+    class="sc-blHHSb sc-gtLWhw bXlivv blKddV"
     variant="primary"
-  />
+  >
+    <span
+      class="icon"
+    />
+  </button>
 </DocumentFragment>
 `;
 
 exports[`Button render tertiary large 1`] = `
 <DocumentFragment>
   <button
-    class="sc-blHHSb eZapBy"
+    class="sc-blHHSb sc-gtLWhw hWgJtU fZaaaN"
     variant="tertiary"
-  />
+  >
+    <span
+      class="icon"
+    />
+  </button>
 </DocumentFragment>
 `;

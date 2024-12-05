@@ -11,13 +11,13 @@ export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(functio
   return (
     <StyledIconButton ref={ref} variant={variant} {...restProps}>
       {position === "top" && (
-        <span className="top">
+        <span className="icon">
           {typeof icon === "string" ? <Icon width={48} height={48} name={icon as IconName} /> : icon}
         </span>
       )}
-      {!!children && <span>{children}</span>}
+      {children}
       {position === "bottom" && (
-        <span className="bottom">
+        <span className="icon">
           {typeof icon === "string" ? <Icon width={48} height={48} name={icon as IconName} /> : icon}
         </span>
       )}

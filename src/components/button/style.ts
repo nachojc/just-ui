@@ -4,6 +4,12 @@ import styled from "styled-components";
 import type { ButtonProps } from "./types";
 
 export const StyledButton = styled.button<ButtonProps>`
+  .left {
+    margin-right: ${(props) => props?.theme.size["md"]};
+  }
+  .right {
+    margin-left: ${(props) => props?.theme.size["xxl"]};
+  }
   ${(props) => props?.theme.components.button.default}
   ${(props) => props?.theme.components.button[props.variant]?.default}
   ${(props) => props.disabled && props?.theme.components.button[props.variant]?.disabled}

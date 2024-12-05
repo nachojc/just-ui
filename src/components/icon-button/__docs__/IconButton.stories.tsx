@@ -30,6 +30,7 @@ export const Top: Story = {
 export const Bottom: Story = {
   args: {
     disabled: false,
+    position: "bottom",
     icon: <Icon name="AddIcon" />,
     onClick: () => console.log("IconButton"),
     variant: "primary",

@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { Button } from "..";
 import React from "react";
+import { Icon } from "../..";
 
 type Story = StoryObj<typeof Button>;
 
@@ -41,6 +42,27 @@ export const Tertiary: Story = {
     disabled: false,
     variant: "tertiary",
     size: "small",
+    onClick: () => console.log("Button"),
+  },
+  render: (args) => <Button {...args}>Tertiary</Button>,
+};
+
+export const WithIconLeft: Story = {
+  args: {
+    disabled: false,
+    variant: "tertiary",
+    size: "small",
+    iconLeft: <Icon name="AddIcon" />,
+    onClick: () => console.log("Button"),
+  },
+  render: (args) => <Button {...args}>Tertiary</Button>,
+};
+export const WithIconRight: Story = {
+  args: {
+    disabled: false,
+    variant: "tertiary",
+    size: "small",
+    iconRight: <Icon name="AddIcon" />,
     onClick: () => console.log("Button"),
   },
   render: (args) => <Button {...args}>Tertiary</Button>,
