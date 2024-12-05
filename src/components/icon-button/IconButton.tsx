@@ -5,7 +5,7 @@ import Icon from "../icon/Icon";
 import { IconName } from "../icon/types";
 
 export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(function Button(
-  { text, icon, position = "top", children, variant = "secondary", ...restProps },
+  { icon, position = "top", children, variant = "secondary", ...restProps },
   ref,
 ) {
   return (
@@ -15,7 +15,7 @@ export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(functio
           {typeof icon === "string" ? <Icon width={48} height={48} name={icon as IconName} /> : icon}
         </span>
       )}
-      {text || children}
+      {!!children && <span>{children}</span>}
       {position === "bottom" && (
         <span className="bottom">
           {typeof icon === "string" ? <Icon width={48} height={48} name={icon as IconName} /> : icon}

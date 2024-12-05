@@ -6,7 +6,7 @@ import { Icon } from "../..";
 type Story = StoryObj<typeof IconButton>;
 
 const meta: Meta<typeof IconButton> = {
-  title: "form/IconButton",
+  title: "Buttons/IconButton",
   component: IconButton,
   argTypes: {
     disabled: { control: "boolean", defaultValue: false },
