@@ -10,7 +10,7 @@ export const CardTitle = forwardRef<HTMLDivElement, CardTitleProps>(function Car
     !!(children || Options) && (
       <StyledCardTitle ref={ref} {...restProps}>
         <div>{children}</div>
-        {Options && isValidElement(Options) && <div>{Options}</div>}
+        {Options && isValidElement(Options) && Options}
       </StyledCardTitle>
     )
   );

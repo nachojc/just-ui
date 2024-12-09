@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import type { ReactElement, ReactNode } from "react";
 
 export type CardProps = {
   // border?: "true" | "false";
@@ -8,7 +8,7 @@ export type CardProps = {
 
 export type CardTitleProps = {
   title?: string;
-  options?: ReactNode;
+  options?: ReactElement;
   onClose?: () => void;
   children?: ReactNode;
 };

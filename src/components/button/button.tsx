@@ -1,4 +1,4 @@
-import { forwardRef } from "react";
+import { cloneElement, forwardRef, isValidElement } from "react";
 import type { ButtonProps } from "./types";
 import { StyledButton } from "./style";
 import { Icon } from "..";
@@ -8,19 +8,24 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button
   { text, children, iconLeft, iconRight, variant = "secondary", ...restProps },
   ref,
 ) {
+  const leftElem = isValidElement(iconLeft) ? cloneElement(iconLeft, { className: "left" }) : iconLeft;
+  const rightElem = isValidElement(iconRight) ? cloneElement(iconRight, { className: "right" }) : iconRight;
+
   return (
     <StyledButton ref={ref} variant={variant} {...restProps}>
-      {iconLeft && (
-        <div className="left">
-          {typeof iconLeft === "string" ? <Icon width={48} height={48} name={iconLeft as IconName} /> : iconLeft}
-        </div>
-      )}
+      {leftElem &&
+        (typeof leftElem === "string" ? (
+          <Icon className="left" width={48} height={48} name={iconLeft as IconName} />
+        ) : (
+          leftElem
+        ))}
       {text || children}
-      {iconRight && (
-        <div className="right">
-          {typeof iconRight === "string" ? <Icon width={48} height={48} name={iconRight as IconName} /> : iconRight}
-        </div>
-      )}
+      {rightElem &&
+        (typeof rightElem === "string" ? (
+          <Icon className="right" width={48} height={48} name={iconRight as IconName} />
+        ) : (
+          rightElem
+        ))}
     </StyledButton>
   );
 });

@@ -1,6 +1,5 @@
 import { FC, SVGAttributes } from "react";
 import { IconProps, iconsDefinition } from "./types";
-import { StyledIcon } from "./style";
 
 export const Icon: FC<IconProps> = function Icon({ name, ...props }) {
   let SvgIcon = iconsDefinition[name];
@@ -12,11 +11,7 @@ export const Icon: FC<IconProps> = function Icon({ name, ...props }) {
   defaultSvgProps = { ...defaultSvgProps, width: 24, height: 24, ...props };
 
   if (typeof SvgIcon === "function") {
-    return (
-      <StyledIcon className="icon">
-        <SvgIcon {...defaultSvgProps} />
-      </StyledIcon>
-    );
+    return <SvgIcon className="icon" {...defaultSvgProps} />;
   }
 };
 
