@@ -19,10 +19,7 @@ const config: StorybookConfig = {
     const { mergeConfig } = await import("vite");
 
     return mergeConfig(config, {
-      // Add dependencies to pre-optimization
-      optimizeDeps: {
-        // include: ['storybook-dark-mode'],
-      },
+      optimizeDeps: {},
     });
   },
   typescript: {
