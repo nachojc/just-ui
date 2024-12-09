@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-expressions */
-/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable no-undef */
 /* eslint-disable @typescript-eslint/no-require-imports */
 
@@ -25,7 +23,7 @@ const execSvgr = (initFolder, finalFolder) => {
     .map((item) => item[0].toUpperCase().concat(item.substring(1)));
   const listFileNames = files.map((file) => file.substring(0, file.length - 4).concat(".tsx"));
 
-  !existsSync(finalFolder) && mkdirSync(finalFolder, { recursive: true });
+  if (!existsSync(finalFolder)) mkdirSync(finalFolder, { recursive: true });
 
   files.forEach((item, i) => {
     const svgCode = readFileSync(join(initFolder, item)).toString();

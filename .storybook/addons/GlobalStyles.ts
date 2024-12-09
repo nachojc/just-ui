@@ -27,7 +27,7 @@ const globalStyle = createGlobalStyle`
   body  {
     -webkit-font-smoothing: antialiased;
     height: 100vh;
-    width: 50vw;
+    width: 100vw;
     margin: 0 auto;
     background-color: ${({ theme }: GlobalThemeProps) => theme.background};
     display: flex;

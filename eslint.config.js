@@ -26,6 +26,6 @@ export default [
     },
   },
   {
-    ignores: ["storybook-static/*", "dist/*", " node_modules/*", "coverage"],
+    ignores: ["storybook-static/*", "dist/*", " node_modules/*", "coverage", "temp"],
   },
 ];

@@ -4,6 +4,8 @@ import { font } from "./fonts";
 import { components } from "./components";
 import { size } from "./size";
 import { radius } from "./radius";
+import { spacing } from "./spacing";
+import { opacity } from "./opacity";
 
 export const defaultTheme: DefaultTheme = {
   borderRadius: "4px",
@@ -29,7 +31,9 @@ export const defaultTheme: DefaultTheme = {
     },
   },
   font,
+  opacity,
   size,
+  spacing,
   radius,
   components,
 };

@@ -1,8 +1,8 @@
 {
-  "include": ["src"],
+  "include": ["src", "temp/tailwind-preset.js"],
   "exclude": ["src/**/__docs__", "src/**/*.stories.ts", "src/**/*.stories.tsx", "src/**/__test__"],
   "compilerOptions": {
-    "baseUrl":"./",
+    "baseUrl": "./",
     "target": "ESNext",
     "module": "es2015",
 
@@ -19,7 +19,6 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-
 
     /* Linting */
     "strict": true,
