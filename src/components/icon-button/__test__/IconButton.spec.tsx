@@ -1,5 +1,5 @@
 import { render } from "@testing-library/react";
-import { IconButton } from "../";
+import { IconButton } from "..";
 import React from "react";
 import { wrapWithTheme } from "../../../utils/ThemeWrapper";
 

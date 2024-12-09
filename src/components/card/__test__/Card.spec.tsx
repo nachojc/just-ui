@@ -5,11 +5,13 @@ import { wrapWithTheme } from "../../../utils/ThemeWrapper";
 
 describe("Card", () => {
   it("render", async () => {
-    const btn = render(wrapWithTheme(<Card />));
-    expect(btn).toBeTruthy();
+    const { asFragment } = render(wrapWithTheme(<Card />));
+    const btn = asFragment();
+    expect(btn).toMatchSnapshot();
   });
   it("render with another Theme", async () => {
-    const btn = render(wrapWithTheme(<Card />, { themeName: "publicTheme" }));
-    expect(btn).toBeTruthy();
+    const { asFragment } = render(wrapWithTheme(<Card />, { themeName: "publicTheme" }));
+    const btn = asFragment();
+    expect(btn).toMatchSnapshot();
   });
 });

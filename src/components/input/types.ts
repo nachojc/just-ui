@@ -8,7 +8,8 @@ export type InputProps = {
   label?: string;
   error?: string;
   size?: "small" | "large";
-  onClick?: MouseEventHandler<HTMLInputElement>;
+  onClick?: MouseEventHandler<HTMLDivElement>;
+  onFocus?: MouseEventHandler<HTMLInputElement>;
   left?: string | ReactElement<IconProps>;
   right?: string | ReactElement<IconProps>;
 };

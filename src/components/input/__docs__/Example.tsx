@@ -2,7 +2,7 @@ import React, { type FC } from "react";
 import Input from "../Input";
 import type { InputProps } from "../types";
 
-const Example: FC<InputProps> = ({ disabled = false, onClick = () => {}, size = "small" }) => {
+const Example: FC<InputProps> = ({ disabled = false, onClick = () => {}, error }) => {
   return (
     <div
       style={{
@@ -12,7 +12,7 @@ const Example: FC<InputProps> = ({ disabled = false, onClick = () => {}, size = 
         height: "100%",
       }}
     >
-      <Input size={size} disabled={disabled} onClick={onClick} />
+      <Input label="Input" error={error} disabled={disabled} onClick={onClick} />
     </div>
   );
 };

@@ -10,7 +10,7 @@ import {
   StyledInputRight,
 } from "./style";
 
-export const Input = forwardRef<HTMLInputElement, InputProps>(function Button(
+export const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
   { asBlock, label, left, right, error, disabled, className, size, ...restProps },
   ref,
 ) {
@@ -30,7 +30,11 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(function Button(
   const commonProps = { size, error, disabled, onClick: handleOnFocus };
   return (
     <StyledInput className={className}>
-      {(label || asBlock) && <StyledInputLabel {...commonProps}>{label}</StyledInputLabel>}
+      {(label || asBlock) && (
+        <StyledInputLabel data-testid="input-label" {...commonProps}>
+          {label}
+        </StyledInputLabel>
+      )}
       <StyledInputContainer ref={divRef} {...commonProps}>
         {leftElem && <StyledInputLeft {...commonProps}>{leftElem}</StyledInputLeft>}
         <StyledInputMain ref={ref} {...commonProps} {...restProps} />
