@@ -1,31 +1,27 @@
 import { Canvas, Meta } from "@storybook/blocks";
 import Example from "./Example.tsx";
-import * as Input from "./Input.stories.tsx";
+import * as TextArea from "./TextArea.stories.tsx";
 
-<Meta of={Input} title="Input" />
+<Meta of={TextArea} title="TextArea" />
 
-# Input
+# TextArea
 
-Input component with different props.
+TextArea component with different props.
 
 #### Example
 
-<Canvas of={Input.Default} />
+<Canvas of={TextArea.Default} />
 
 ## Usage
 
 ```ts
-import {Input} from "@just/ui-components";
+import {TextArea} from "@just/ui-components";
 
-const Example = ({error}) => {
+const Example = () => {
   return (
-      <Input
+      <TextArea
         size={"small"}
         onClick={()=> console.log("Clicked")}
-        left="£"
-        right=".00"
-        label="Name"
-        error={error}
       />
   );
 };
