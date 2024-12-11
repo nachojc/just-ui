@@ -47,12 +47,12 @@ exports[`Input with Label 1`] = `
   <div
     class="sc-blHHSb hBBJiZ"
   >
-    <div
+    <label
       class="sc-ghWlax kvLWXm"
       data-testid="input-label"
     >
       Input
-    </div>
+    </label>
     <div
       class="sc-egkSDF leasZd"
     >
@@ -99,7 +99,7 @@ exports[`Input with display asBlock 1`] = `
   <div
     class="sc-blHHSb hBBJiZ"
   >
-    <div
+    <label
       class="sc-ghWlax kvLWXm"
       data-testid="input-label"
     />
@@ -122,13 +122,13 @@ exports[`Input with error 1`] = `
   <div
     class="sc-blHHSb hBBJiZ"
   >
-    <div
+    <label
       class="sc-ghWlax kvLWXm"
       data-testid="input-label"
       error="no text"
     >
       Input
-    </div>
+    </label>
     <div
       class="sc-egkSDF bklFls"
       error="no text"
@@ -153,12 +153,12 @@ exports[`Input with left icon 1`] = `
   <div
     class="sc-blHHSb hBBJiZ"
   >
-    <div
+    <label
       class="sc-ghWlax kvLWXm"
       data-testid="input-label"
     >
       Input
-    </div>
+    </label>
     <div
       class="sc-egkSDF leasZd"
     >
@@ -195,12 +195,12 @@ exports[`Input with left text 1`] = `
   <div
     class="sc-blHHSb hBBJiZ"
   >
-    <div
+    <label
       class="sc-ghWlax kvLWXm"
       data-testid="input-label"
     >
       Input
-    </div>
+    </label>
     <div
       class="sc-egkSDF leasZd"
     >
@@ -222,12 +222,12 @@ exports[`Input with right icon 1`] = `
   <div
     class="sc-blHHSb hBBJiZ"
   >
-    <div
+    <label
       class="sc-ghWlax kvLWXm"
       data-testid="input-label"
     >
       Input
-    </div>
+    </label>
     <div
       class="sc-egkSDF leasZd"
     >
@@ -269,12 +269,12 @@ exports[`Input with right text 1`] = `
   <div
     class="sc-blHHSb hBBJiZ"
   >
-    <div
+    <label
       class="sc-ghWlax kvLWXm"
       data-testid="input-label"
     >
       Input
-    </div>
+    </label>
     <div
       class="sc-egkSDF leasZd"
     >

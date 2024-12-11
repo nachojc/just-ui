@@ -5,9 +5,9 @@ import { size } from "../size";
 export const button = {
   default: {
     padding: `${size["xl"]}`,
-    border: `${size["xxs"]} solid`,
+    border: `${size["2xs"]} solid`,
     "border-radius": size["sm"],
-    "line-height": size["xxl"],
+    "line-height": size["2xl"],
     "font-size": size["xl-"],
     "font-family": font.sans,
     "letter-spacing": ".075rem",

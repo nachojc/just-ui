@@ -6,7 +6,7 @@ import { StyledButton } from "../button/style";
 
 export const StyledIconButton = styled<PropsWithChildren<IconButtonProps>>(StyledButton)`
   flex-direction: column;
-  padding: ${(props) => `${props?.theme.size["xl"]} ${props?.theme.size["xxl"]}`}
+  padding: ${(props) => `${props?.theme.size["xl"]} ${props?.theme.size["2xl"]}`}
     ${(props) => {
       switch (props.size) {
         case "small":

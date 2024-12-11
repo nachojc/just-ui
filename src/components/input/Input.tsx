@@ -11,7 +11,7 @@ import {
 } from "./style";
 
 export const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
-  { asBlock, label, left, right, error, disabled, className, size, ...restProps },
+  { asBlock, label, id, left, right, error, disabled, className, size, ...restProps },
   ref,
 ) {
   const divRef = useRef<HTMLDivElement>(null);
@@ -31,13 +31,13 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
   return (
     <StyledInput className={className}>
       {(label || asBlock) && (
-        <StyledInputLabel data-testid="input-label" {...commonProps}>
+        <StyledInputLabel htmlFor={id} data-testid="input-label" {...commonProps}>
           {label}
         </StyledInputLabel>
       )}
       <StyledInputContainer ref={divRef} {...commonProps}>
         {leftElem && <StyledInputLeft {...commonProps}>{leftElem}</StyledInputLeft>}
-        <StyledInputMain ref={ref} {...commonProps} {...restProps} />
+        <StyledInputMain ref={ref} id={id} {...commonProps} {...restProps} />
         {rightElem && <StyledInputRight {...commonProps}>{rightElem}</StyledInputRight>}
       </StyledInputContainer>
       {(error || asBlock) && <StyledInputError {...commonProps}>{error}</StyledInputError>}

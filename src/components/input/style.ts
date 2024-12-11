@@ -40,7 +40,7 @@ export const StyledInputError = styled.div<InputProps>`
   ${(props) => hasText(props.error) && props?.theme.components.input.error}
   ${(props) => props.disabled && props?.theme.components.input.disabled}
 `;
-export const StyledInputLabel = styled.div<InputProps>`
+export const StyledInputLabel = styled.label<InputProps>`
   ${(props) => props?.theme.components.input.small}
   ${(props) => props.disabled && props?.theme.components.input.disabled}
 `;

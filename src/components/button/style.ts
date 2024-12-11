@@ -8,7 +8,7 @@ export const StyledButton = styled.button<ButtonProps>`
     margin-right: ${(props) => props?.theme.size["md"]};
   }
   .right {
-    margin-left: ${(props) => props?.theme.size["xxl"]};
+    margin-left: ${(props) => props?.theme.size["2xl"]};
   }
   ${(props) => props?.theme.components.button.default}
   ${(props) => props?.theme.components.button[props.variant]?.default}

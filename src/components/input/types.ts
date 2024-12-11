@@ -2,6 +2,7 @@ import type { MouseEventHandler, ReactElement } from "react";
 import { IconProps } from "../icon/types";
 
 export type InputProps = {
+  id?: string;
   asBlock?: boolean;
   className?: string;
   disabled?: boolean;

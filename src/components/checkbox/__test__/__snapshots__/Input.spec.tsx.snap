@@ -1,0 +1,106 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Checkbox default render 1`] = `
+<DocumentFragment>
+  <div>
+    <label
+      class="sc-blHHSb zYgxi"
+    >
+      <input
+        class="sc-gtLWhw eXNWMH"
+        type="checkbox"
+      />
+      <span
+        class="sc-egkSDF ldjgxr"
+      />
+    </label>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Checkbox small 1`] = `
+<DocumentFragment>
+  <div>
+    <label
+      class="sc-blHHSb zYgxi"
+    >
+      <input
+        class="sc-gtLWhw eXNWMH"
+        type="checkbox"
+      />
+      <span
+        class="sc-egkSDF hiipVO"
+      />
+    </label>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Checkbox with disabled 1`] = `
+<DocumentFragment>
+  <div>
+    <label
+      class="sc-blHHSb giWDzg"
+      disabled=""
+    >
+      <input
+        class="sc-gtLWhw eXNWMH"
+        disabled=""
+        type="checkbox"
+      />
+      <span
+        class="sc-egkSDF euavUv"
+        disabled=""
+      />
+    </label>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Checkbox with display asBlock 1`] = `
+<DocumentFragment>
+  <div>
+    <label
+      class="sc-blHHSb zYgxi"
+    >
+      <input
+        class="sc-gtLWhw eXNWMH"
+        type="checkbox"
+      />
+      <span
+        class="sc-egkSDF ldjgxr"
+      />
+    </label>
+    <div
+      class="sc-fAUdSK kdLlYL"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Checkbox with error 1`] = `
+<DocumentFragment>
+  <div>
+    <label
+      class="sc-blHHSb zYgxi"
+      error="no text"
+    >
+      Input
+      <input
+        class="sc-gtLWhw eXNWMH"
+        type="checkbox"
+      />
+      <span
+        class="sc-egkSDF fjrHsL"
+        error="no text"
+      />
+    </label>
+    <div
+      class="sc-fAUdSK cVTuIu"
+      error="no text"
+    >
+      no text
+    </div>
+  </div>
+</DocumentFragment>
+`;

@@ -3,7 +3,7 @@ import { size } from "../size";
 export const card = {
   default: {
     "border-radius": size["md"],
-    padding: size["xxl"],
+    padding: size["2xl"],
     display: "flex",
     "flex-direction": "column",
     "justify-content": "space-between",
@@ -18,7 +18,7 @@ export const card = {
     "align-items": "center",
     "padding-bottom": size["md"],
     "margin-bottom": size["xl"],
-    "border-bottom": `${size["xxs"]} solid`,
+    "border-bottom": `${size["2xs"]} solid`,
   },
   footer: {
     "padding-top": size["md"],
