@@ -1,7 +1,7 @@
 import { colorPalette, colors } from "../colors";
 import { size } from "../size";
 
-export const checkbox = {
+export const radio = {
   default: {
     cursor: "pointer",
     display: "inline-flex",
@@ -11,8 +11,14 @@ export const checkbox = {
     "&:hover input:not([disabled])~span": {
       "border-color": colors["orange-500"],
     },
+    "&:hover input:not([disabled])~span::after": {
+      background: colors["orange-500"],
+    },
     "&:active input:not([disabled])~span": {
       "border-color": colors["orange-500"],
+    },
+    "&:active input:not([disabled])~span::after": {
+      background: colors["orange-500"],
     },
     "input:checked~span::after": {
       display: "block",
@@ -23,29 +29,28 @@ export const checkbox = {
     left: 0,
     height: size["2xl"],
     width: size["2xl"],
-    "border-radius": size["sm"],
-    "background-color": "transparent",
+    "border-radius": "50%",
+    background: "transparent",
     border: `${size["2xs"]} solid ${colors["just-black"]}`,
     tick: {
       position: "absolute",
-      left: "7px",
-      top: "3px",
-      width: "6px",
-      height: "12px",
-      border: `solid ${colors["just-black"]}`,
-      "border-width": "0 2px 2px 0",
-      transform: "rotate(45deg)",
+      left: "4px",
+      top: "4px",
+      width: "15px",
+      height: "15px",
+      background: colors["just-black"],
+      "border-radius": "50%",
       small: {
-        top: size["2xs"],
-        left: size["sm"],
-        width: size["sm"],
-        height: size["md"],
+        top: "3px",
+        left: "3px",
+        width: "9px",
+        height: "9px",
       },
       disabled: {
-        "border-color": colors["gray-700"],
+        background: colors["gray-700"],
       },
       error: {
-        "border-color": colors["gray-700"],
+        background: colors["orange-500"],
       },
     },
     small: {

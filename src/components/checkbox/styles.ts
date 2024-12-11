@@ -21,9 +21,9 @@ export const StyledCheckboxCheck = styled.span<CheckboxProps>`
     display: none;
     content: "";
     ${(props) => props?.theme.components.checkbox.check.tick};
-    ${(props) => props.disabled && props?.theme.components.checkbox.check.disabled};
-    ${(props) => props.size === "small" && props?.theme.components.checkbox.check.small}
-    ${(props) => hasText(props.error) && props?.theme.components.checkbox.error};
+    ${(props) => props.disabled && props?.theme.components.checkbox.check.tick.disabled};
+    ${(props) => props.size === "small" && props?.theme.components.checkbox.check.tick.small}
+    ${(props) => hasText(props.error) && props?.theme.components.checkbox.check.tick.error};
   }
   ${(props) => props?.theme.components.checkbox.check};
   ${(props) => props.size === "small" && props?.theme.components.checkbox.small}

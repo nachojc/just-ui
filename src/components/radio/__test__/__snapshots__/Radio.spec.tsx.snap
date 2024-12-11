@@ -1,0 +1,106 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Radio default render 1`] = `
+<DocumentFragment>
+  <div>
+    <label
+      class="sc-blHHSb detwtI"
+    >
+      <input
+        class="sc-gtLWhw eXNWMH"
+        type="radio"
+      />
+      <span
+        class="sc-egkSDF gDGveH"
+      />
+    </label>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Radio small 1`] = `
+<DocumentFragment>
+  <div>
+    <label
+      class="sc-blHHSb detwtI"
+    >
+      <input
+        class="sc-gtLWhw eXNWMH"
+        type="radio"
+      />
+      <span
+        class="sc-egkSDF gLAsnT"
+      />
+    </label>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Radio with disabled 1`] = `
+<DocumentFragment>
+  <div>
+    <label
+      class="sc-blHHSb gEGRLS"
+      disabled=""
+    >
+      <input
+        class="sc-gtLWhw eXNWMH"
+        disabled=""
+        type="radio"
+      />
+      <span
+        class="sc-egkSDF cxNnSs"
+        disabled=""
+      />
+    </label>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Radio with display asBlock 1`] = `
+<DocumentFragment>
+  <div>
+    <label
+      class="sc-blHHSb detwtI"
+    >
+      <input
+        class="sc-gtLWhw eXNWMH"
+        type="radio"
+      />
+      <span
+        class="sc-egkSDF gDGveH"
+      />
+    </label>
+    <div
+      class="sc-fAUdSK CeDQe"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Radio with error 1`] = `
+<DocumentFragment>
+  <div>
+    <label
+      class="sc-blHHSb detwtI"
+      error="no text"
+    >
+      Input
+      <input
+        class="sc-gtLWhw eXNWMH"
+        type="radio"
+      />
+      <span
+        class="sc-egkSDF iZJQuG"
+        error="no text"
+      />
+    </label>
+    <div
+      class="sc-fAUdSK iJytMv"
+      error="no text"
+    >
+      no text
+    </div>
+  </div>
+</DocumentFragment>
+`;

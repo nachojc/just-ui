@@ -2,10 +2,12 @@ import { button } from "./button";
 import { card } from "./card";
 import { checkbox } from "./checkbox";
 import { input } from "./input";
+import { radio } from "./radio";
 
 export const components = {
   button,
   card,
   checkbox,
   input,
+  radio,
 };

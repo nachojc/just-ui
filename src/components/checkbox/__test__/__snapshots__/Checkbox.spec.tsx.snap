@@ -11,7 +11,7 @@ exports[`Checkbox default render 1`] = `
         type="checkbox"
       />
       <span
-        class="sc-egkSDF ldjgxr"
+        class="sc-egkSDF NQFOD"
       />
     </label>
   </div>
@@ -29,7 +29,7 @@ exports[`Checkbox small 1`] = `
         type="checkbox"
       />
       <span
-        class="sc-egkSDF hiipVO"
+        class="sc-egkSDF dMgjqf"
       />
     </label>
   </div>
@@ -49,7 +49,7 @@ exports[`Checkbox with disabled 1`] = `
         type="checkbox"
       />
       <span
-        class="sc-egkSDF euavUv"
+        class="sc-egkSDF cwYloQ"
         disabled=""
       />
     </label>
@@ -68,11 +68,11 @@ exports[`Checkbox with display asBlock 1`] = `
         type="checkbox"
       />
       <span
-        class="sc-egkSDF ldjgxr"
+        class="sc-egkSDF NQFOD"
       />
     </label>
     <div
-      class="sc-fAUdSK kdLlYL"
+      class="sc-fAUdSK CeDQe"
     />
   </div>
 </DocumentFragment>
@@ -91,12 +91,12 @@ exports[`Checkbox with error 1`] = `
         type="checkbox"
       />
       <span
-        class="sc-egkSDF fjrHsL"
+        class="sc-egkSDF lLtdh"
         error="no text"
       />
     </label>
     <div
-      class="sc-fAUdSK cVTuIu"
+      class="sc-fAUdSK iJytMv"
       error="no text"
     >
       no text
