@@ -1,5 +1,7 @@
-import type { MouseEventHandler, ReactElement } from "react";
+import type { HTMLInputTypeAttribute, MouseEventHandler, ReactElement } from "react";
 import { IconProps } from "../icon/types";
+
+type InputType = Exclude<HTMLInputTypeAttribute, "radio" | "checkbox">;
 
 export type InputProps = {
   id?: string;
@@ -9,6 +11,7 @@ export type InputProps = {
   label?: string;
   error?: string;
   size?: "small" | "large";
+  type?: InputType;
   onClick?: MouseEventHandler<HTMLDivElement>;
   onFocus?: MouseEventHandler<HTMLInputElement>;
   left?: string | ReactElement<IconProps>;
