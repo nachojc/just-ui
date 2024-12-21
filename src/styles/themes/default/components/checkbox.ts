@@ -9,10 +9,10 @@ export const checkbox = {
     "padding-left": size["3xl"],
     "align-items": "center",
     "&:hover input:not([disabled])~span": {
-      "border-color": colors["orange-500"],
+      "border-color": colorPalette.hoverForm,
     },
     "&:active input:not([disabled])~span": {
-      "border-color": colors["orange-500"],
+      "border-color": colorPalette.activeForm,
     },
     "input:checked~span::after": {
       display: "block",

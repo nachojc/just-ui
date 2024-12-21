@@ -3,6 +3,7 @@ import { card } from "./card";
 import { checkbox } from "./checkbox";
 import { input } from "./input";
 import { radio } from "./radio";
+import { radiogroup } from "./radiogroup";
 
 export const components = {
   button,
@@ -10,4 +11,5 @@ export const components = {
   checkbox,
   input,
   radio,
+  radiogroup,
 };

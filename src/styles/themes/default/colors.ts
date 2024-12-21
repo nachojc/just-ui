@@ -14,12 +14,17 @@ export const colors = {
 
   "orange-500": "#ff9c53",
 
+  "gray-300": "#aaaaaa",
   "gray-400": "#f6f6f6",
+  "gray-500": "#727272",
+
   "gray-700": "#aaa",
 
   // from tailwind project
   "just-black": "#373433",
   "black-light": "#f2f2f2",
+
+  "green-500": "#2fcfa0",
 };
 
 export const colorPalette = {
@@ -27,4 +32,7 @@ export const colorPalette = {
   secondary: colors["btn-red-700"],
   primary: colors["btn-red-500"],
   error: colors["orange-500"],
+  activeForm: colors["green-500"],
+  hoverForm: colors["gray-500"],
+  disabledForm: colors["gray-300"],
 };

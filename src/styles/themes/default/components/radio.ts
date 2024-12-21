@@ -2,23 +2,29 @@ import { colorPalette, colors } from "../colors";
 import { size } from "../size";
 
 export const radio = {
-  default: {
-    cursor: "pointer",
-    display: "inline-flex",
-    position: "relative",
-    "padding-left": size["3xl"],
+  container: {},
+  label: {
+    display: "flex",
     "align-items": "center",
+    padding: `${size["md"]} 0 ${size["md"]} ${size["3xl"]}`,
+    height: size["3xl"],
+    position: "relative",
+
+    small: {
+      height: size["2xl"],
+    },
+
     "&:hover input:not([disabled])~span": {
-      "border-color": colors["orange-500"],
+      "border-color": colorPalette.hoverForm,
     },
     "&:hover input:not([disabled])~span::after": {
-      background: colors["orange-500"],
+      background: colorPalette.hoverForm,
     },
     "&:active input:not([disabled])~span": {
-      "border-color": colors["orange-500"],
+      "border-color": colorPalette.activeForm,
     },
     "&:active input:not([disabled])~span::after": {
-      background: colors["orange-500"],
+      background: colorPalette.activeForm,
     },
     "input:checked~span::after": {
       display: "block",
@@ -61,7 +67,7 @@ export const radio = {
   small: {
     display: "flex",
     "align-items": "center",
-    padding: `${size["md"]} ${size["xl"]}`,
+    padding: `${size["sm"]} 0 ${size["sm"]} ${size["2xl"]}`,
     height: size["3xl"],
   },
   error: {
